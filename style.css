@@ -1,0 +1,200 @@
+/* Reset & Base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+}
+
+/* Header */
+.header {
+    background: #4cafef;
+    color: white;
+    text-align: center;
+    padding: 1.5rem 1rem;
+}
+
+/* Navigation (Flexbox for alignment) */
+.navbar ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    list-style: none;
+    background: #333;
+}
+
+.navbar li {
+    margin: 10px 0;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Hero Section */
+.hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1.5rem 1rem;
+    background: #f9f9f9;
+    text-align: center;
+}
+
+.hero-image img {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 8px;
+    margin-top: 15px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background: #4cafef;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+/* Featured Section */
+.featured {
+    padding: 1.5rem 1rem;
+    background: #f4f4f4;
+    text-align: center;
+}
+
+.featured-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.card {
+    background: white;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* Main Layout (CSS Grid for larger screens, single column by default) */
+.main-layout {
+    display: block;
+    max-width: 100%;
+    margin: 20px auto;
+    padding: 0 10px;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.blog-card {
+    background: #f4f4f4;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.sidebar {
+    background: #eaeaea;
+    padding: 15px;
+    border-radius: 8px;
+    margin-top: 20px;
+}
+
+/* Newsletter */
+.newsletter {
+    text-align: center;
+    padding: 2rem 1rem;
+    background: #4cafef;
+    color: white;
+}
+
+.newsletter input {
+    padding: 10px;
+    width: 90%;
+    max-width: 300px;
+    border: none;
+    border-radius: 5px;
+    margin: 10px 0;
+}
+
+.newsletter button {
+    padding: 10px 20px;
+    background: #333;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Footer */
+.footer {
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+}
+
+.footer-grid {
+    display: block;
+    margin-bottom: 10px;
+}
+
+/* --------- MEDIA QUERIES (Mobile First) --------- */
+
+/* Tablet (min-width: 600px) */
+@media (min-width: 600px) {
+    .navbar ul {
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .navbar li {
+        margin: 0 15px;
+    }
+
+    .featured-grid {
+        flex-direction: row;
+        justify-content: center;
+    }
+}
+
+/* Desktop (min-width: 900px) */
+@media (min-width: 900px) {
+    .hero {
+        flex-direction: row;
+        text-align: left;
+        justify-content: space-between;
+    }
+
+    .hero-text {
+        max-width: 50%;
+    }
+
+    .main-layout {
+        display: grid;
+        grid-template-columns: 3fr 1fr;
+        gap: 20px;
+        max-width: 1200px;
+    }
+
+    .footer-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+        text-align: left;
+    }
+}
